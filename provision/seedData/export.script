@@ -1,0 +1,1 @@
+mongoexport --host Cluster0-shard-0/cluster0-shard-00-00-thead.mongodb.net:27017,cluster0-shard-00-01-thead.mongodb.net:27017,cluster0-shard-00-02-thead.mongodb.net:27017 --ssl --username rxie --authenticationDatabase admin --db graces --collection <COLLECTION> --type json --out <FILENAME>.json

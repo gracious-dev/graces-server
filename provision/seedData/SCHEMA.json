@@ -1,0 +1,167 @@
+{
+    "_id": "_Role",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "name": "string",
+    "users": "relation<_User>",
+    "roles": "relation<_Role>",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            },
+            "name_1": {
+                "name": 1
+            }
+        }
+    },
+    "desc": "string",
+    "level": "number"
+}
+{
+    "_id": "_User",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "username": "string",
+    "email": "string",
+    "emailVerified": "boolean",
+    "authData": "object",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            },
+            "username_1": {
+                "username": 1
+            },
+            "case_insensitive_username": {
+                "username": 1
+            },
+            "email_1": {
+                "email": 1
+            },
+            "case_insensitive_email": {
+                "email": 1
+            }
+        }
+    },
+    "phone": "string",
+    "tid": "string",
+    "tenant_id": "string"
+}
+{
+    "_id": "ObjectTest",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "name": "string",
+    "roles": "string",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            }
+        }
+    }
+}
+{
+    "_id": "_Session",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "restricted": "boolean",
+    "user": "*_User",
+    "installationId": "string",
+    "sessionToken": "string",
+    "expiresAt": "date",
+    "createdWith": "object",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            }
+        }
+    }
+}
+{
+    "_id": "undefined",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date"
+}
+{
+    "_id": "Customer",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "tenant_id": "string",
+    "name": "string",
+    "address": "string",
+    "status": "string",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            }
+        }
+    }
+}
+{
+    "_id": "Profile",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "anniversary": "date",
+    "birthday": "date",
+    "address": "object",
+    "interests": "array",
+    "work_address": "object",
+    "family": "object",
+    "nudge_filter": "object",
+    "prefered_channel": "array",
+    "tenant_id": "string",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            }
+        }
+    }
+}
+{
+    "_id": "ProfileExt",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "badges": "array",
+    "scores": "array",
+    "nps": "array",
+    "feedbacks": "array",
+    "actions": "array",
+    "reviews": "array",
+    "tenant_id": "string",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            }
+        }
+    }
+}
+{
+    "_id": "ProfileNotes",
+    "objectId": "string",
+    "updatedAt": "date",
+    "createdAt": "date",
+    "details": "object",
+    "tenant_id": "string",
+    "_metadata": {
+        "indexes": {
+            "_id_": {
+                "_id": 1
+            }
+        }
+    }
+}

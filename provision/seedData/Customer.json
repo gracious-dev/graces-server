@@ -1,0 +1,15 @@
+{
+    "_id": "nZyl0Ekfwq",
+    "parent_id": null,
+    "tenant_id": "1iw9321pzk9awcchu",
+    "name": "Gracious AI",
+    "address": "123 Virtual Street, Atherton, CA 91212",
+    "contacts": null,
+    "status": "new",
+    "_created_at": {
+        "$date": "2020-04-22T05:28:28.494Z"
+    },
+    "_updated_at": {
+        "$date": "2020-04-22T05:28:28.494Z"
+    }
+}
