@@ -10,6 +10,7 @@ const query = new Parse.Query(Parse.User);
 query.equalTo("username", "grace.love");
 query.find().then((results) => {
   var user = results[0];
+  console.log("user: " + user).username;
 
   var Profile = Parse.Object.extend("Profile");
   var profile = new Profile();

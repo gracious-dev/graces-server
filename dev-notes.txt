@@ -1,0 +1,13 @@
+1. TypeScript check in VSCode for Javascript file:
+https://stackoverflow.com/questions/48859169/js-types-can-only-be-used-in-a-ts-file-visual-studio-code-using-ts-check
+https://github.com/flowtype/flow-for-vscode#setup
+
+
+
+node ./bin/parse-server
+-> lib/cli/parse-server
+-> top level:  src/index.js
+-> src/ParseServer.js 
+-> start ParseServer, and Parse (nodejs client, for ParseCloud)
+
+
