@@ -1,0 +1,88 @@
+- it is hard to use rules to abstract the world, we can only do with very specific scenarios 
+  (expert systems for nuclear reactors, KE for tax, and each are different. we are talking about general world, making it difficult to model)
+- each rule is and should be pretty specific, limited and strict
+- the relationship (or lack of such) between many rules
+- time-sequence of rules (repeated, or not-repeated)
+
+
+Apply "Rules" against "Facts" to derive "Events" (that's noteworthy:  alert, warn, praise, congrats)
+- define "Rules":  interface for rule input, data model for rule persistence;
+- collect "Facts": runtime data feeds from all different systems;
+- execute in Rule Engine to get "Events":  Rule Engine, registered with the set of all rules, ready to run upon fact;
+- associate to a target and generate "Nudge": establish "event" with a "target user"
+
+What we are doing here is to set up a structured system to perform the execution in Rule Engine.
+But it is as good as how people would define "rules" and collect "facts", in order to trigger 
+meaningful "events".
+
+
+1. Fact (Data Point):
+    - from a specific data channel;
+    - about a specific object/subject;
+    - may have certain parameters describing the subject;
+    - parameter values
+
+2. Rule:
+    - fact properties
+    - one or more conditions, and relation between conditions 
+    - threshold values
+    - priority
+    - significance?
+    - nightly / real-time?
+    Is a rule result noteworthy....  and type.... (sentimentals); 
+
+3. Rule Engine:
+    - generic logics of applying rule on facts; (note: specific subject or conditions are encoded in rules)
+    - rule registration to maintain all rules (add/remove)
+    - run-time evaluattion of rules, triggered by arrival of a fact, or others
+
+4. Event:
+    - the result of a Rule Engine execution, by applying a rule to a fact;
+    - sometimes, a fact could be a triggering event directly, without applying rules
+    - Event model: (pre-defined or dynamic? model parameters?  nightly / real-time)
+
+5. Association (to target):
+5.1 type of association:
+    - about:   married and have kids, work anniversary
+    - beavioral:  your work performance, 
+    - related: a snowstorm in my zipcode (or region)
+    - subscribed to: Lakers win 
+
+5.2 Association Engine:
+    - how a profile is evaluated, whether reacting to an event?
+    - implicitly interested in weather for a zip code? (Gracious)
+    - explicitly subscribed to Sports/Basketball/Lakers? (User-defined)
+
+
+Taking the example of "I am interested in basketball, and Lakers is my team":
+Fact: 
+- there are superstars in the team, things happened to those stars - pick them out?
+- Lakers won yesterday game:  
+    by 3 points, 
+    by 30 points, 
+    in a dramatic come-back fashion
+    .....   
+    (what type of wins count as newsworthy?)
+- "Lakers won yesterday game", is it a fact, or an event (after applying A>B, A win);   
+    so both fact and event could be a trigger for nudge generation
+
+
+
+Driver options:
+    - start from an employee
+    - start from a data source event
+
+Driver (most likely) 
+    - each data source is run according to its own schedule, results are time-stamped;
+    - results are processed to pick out "facts" into "Fact" table / queue?
+    - "Fact" are processed through Rule Engine to produce "Event"
+
+    - over each profile, evaluate "time-based" rule.  Such as birthday; nightly
+    - over each profile, evaluate interests/news against the "Event"; nightly
+    - this will be event-driven, such as evaluating behavioral/performance against the "Event"; real-time 
+
+
+
+
+Pathlight
+Catalyst

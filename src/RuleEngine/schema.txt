@@ -1,0 +1,28 @@
+CRUD for entities: 
+
+1. Fact
+    id
+    tenant_id  (*  could be across-tenant, so making it optional)
+    source
+    subject
+    details
+
+2. Rule
+    id
+    tenant_id
+    name
+    subject     --> to refer to a fact, also to profile (e.g. hire-date for work anniversary)
+    property
+    operattor
+    value
+    priority    --> to control rule engine execution order
+
+3. Event
+    id
+    tenant_id
+    name
+    type
+    category
+    parameters
+    significance
+
