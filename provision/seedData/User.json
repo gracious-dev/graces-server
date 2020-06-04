@@ -1,2 +1,54 @@
-{"_id":"q5WsQD9esK","username":"rxie","email":"raymond.xie@gracious.ai","phone":"925-222-0202","tid":"1iw9321pzk9awcchu","_hashed_password":"$2b$10$6pa9GHCEWxTTXtg3BfTCD.KRx.2yl3DIfkr850TuvCzTqLEj3JRCC","_wperm":["q5WsQD9esK"],"_rperm":["q5WsQD9esK"],"_acl":{"q5WsQD9esK":{"w":true,"r":true}},"_created_at":{"$date":"2020-04-22T05:35:48.286Z"},"_updated_at":{"$date":"2020-04-22T05:35:48.286Z"}}
-{"_id":"EWFaLfbMnD","tenant_id":"1iw931n55k9bx5oyj","username":"grace.love","email":"grace.love@gracious.ai","phone":"925-111-0101","_hashed_password":"$2b$10$IHNX2hkMfJlofgL2e80yZe.UgDwDGuoZTHdS3VNa5j5s.Ai0ewm/a","_wperm":["EWFaLfbMnD"],"_rperm":["EWFaLfbMnD"],"_acl":{"EWFaLfbMnD":{"w":true,"r":true}},"_created_at":{"$date":"2020-04-22T22:39:03.963Z"},"_updated_at":{"$date":"2020-04-22T22:39:03.963Z"}}
+{"items":[
+{
+    "_id": "q5WsQD9esK",
+    "username": "rxie",
+    "email": "raymond.xie@gracious.ai",
+    "phone": "925-222-0202",
+    "tid": "1iw9321pzk9awcchu",
+    "_hashed_password": "$2b$10$6pa9GHCEWxTTXtg3BfTCD.KRx.2yl3DIfkr850TuvCzTqLEj3JRCC",
+    "_wperm": [
+        "q5WsQD9esK"
+    ],
+    "_rperm": [
+        "q5WsQD9esK"
+    ],
+    "_acl": {
+        "q5WsQD9esK": {
+            "w": true,
+            "r": true
+        }
+    },
+    "_created_at": {
+        "$date": "2020-04-22T05:35:48.286Z"
+    },
+    "_updated_at": {
+        "$date": "2020-04-22T05:35:48.286Z"
+    }
+},
+{
+    "_id": "EWFaLfbMnD",
+    "tenant_id": "1iw931n55k9bx5oyj",
+    "username": "grace.love",
+    "email": "grace.love@gracious.ai",
+    "phone": "925-111-0101",
+    "_hashed_password": "$2b$10$IHNX2hkMfJlofgL2e80yZe.UgDwDGuoZTHdS3VNa5j5s.Ai0ewm/a",
+    "_wperm": [
+        "EWFaLfbMnD"
+    ],
+    "_rperm": [
+        "EWFaLfbMnD"
+    ],
+    "_acl": {
+        "EWFaLfbMnD": {
+            "w": true,
+            "r": true
+        }
+    },
+    "_created_at": {
+        "$date": "2020-04-22T22:39:03.963Z"
+    },
+    "_updated_at": {
+        "$date": "2020-04-22T22:39:03.963Z"
+    }
+}
+]}

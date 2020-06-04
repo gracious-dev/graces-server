@@ -1,6 +1,7 @@
 var config = {};
 
 config.fieldMappings = {
+  srcEntityId: "id",
   displayName: "displayName",
   firstName: "firstName",
   lastName: "lastName",

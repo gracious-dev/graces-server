@@ -13,6 +13,7 @@ query.find().then((results) => {
   console.log(obj.get('displayName'));
 });
 
+
 /*
 const query = new Parse.Query('_User');
 query.equalTo("username", "rxie");

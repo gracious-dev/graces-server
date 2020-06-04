@@ -1,0 +1,49 @@
+
+1. Webhook link and security (https, with a key to verify)
+e.g.  https://gracious.ai/bamboohr/webhook?key=123abc
+
+
+2. List of monitored fields, and post fields 
+Data format:
+employees[<employeeId>][changedFields][0]=Employee #
+employees[<employeeId>][changedFields][1]=First Name
+employees[<employeeId>][Employee #]=9
+employees[<employeeId>][First name]=Robert
+employees[<employeeId>][Last name]=Smith
+employees[<employeeId>][Job title]=Engineer
+
+
+3. Add "source_entity_id" to establish ID relationship between source system and Gracious record
+(set during initial import, and then used to resolve record for updates)
+
+
+4. Last changed since: 
+URL: /api/gateway.php/{company}/v1/employees/changed/?since={ISO 8601 timestamp}&type={type}
+where type = [deleted | updated | inserted]
+
+sample result:
+{
+    "latest": "2011-06-02T19:26:23+00:00",
+    "employees": {
+        "3": {
+            "id":"3",
+            "action":"Inserted",
+            "lastChanged":"2011-06-02T19:26:23+00:00"
+        },
+        "4": {
+            "id":"4",
+            "action":"Updated",
+            "lastChanged":"2011-06-02T19:26:23+00:00"
+        },
+        "5": {
+            "id":"5",
+            "action":"Deleted",
+            "lastChanged":"2011-06-02T19:26:23+00:00"
+        },
+        "10": {
+            "id":"10",
+            "action":"Inserted",
+            "lastChanged":"2011-05-31T22:57:10+00:00"
+        }
+    }
+}
