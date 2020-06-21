@@ -1,19 +1,15 @@
 // Representing "Fact" for Rule Engineering processing: properties and functions
 export class ReFact {
-  // list of properties
-  /*
-    id
-    tenant_id  (*  could be across-tenant, so making it optional)
-    source
-    subject
-    details
-  */
   // functions for "Fact"
   className() {
     return 'ReFact';
   }
 
-  load() {}
+  load() {
+    const fs = require('fs');
+    const facts = JSON.parse(fs.readFileSync('../Test/facts.json', 'utf8'));
+    return facts;
+  }
 }
 
 export default ReFact;

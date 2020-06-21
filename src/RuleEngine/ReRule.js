@@ -16,6 +16,11 @@ export class ReRule {
   */
 
   // functions for "Rule"
+  load() {
+    const fs = require('fs');
+    const rules = JSON.parse(fs.readFileSync('../Test/rules.json', 'utf8'));
+    return rules;
+  }
 }
 
 export default ReRule;
