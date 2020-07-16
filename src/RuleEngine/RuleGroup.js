@@ -24,3 +24,5 @@ export class RuleGroup {
     return tmp;
   }
 }
+
+export default RuleGroup;

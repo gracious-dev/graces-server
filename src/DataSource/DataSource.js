@@ -1,8 +1,10 @@
 // Represents a data source for incoming data points
-import DataCache from './DataCache';
-import hash from 'object-hash';
+// import DataCache from './DataCache';
+// import hash from 'object-hash';
+const DataCache = require('./DataCache');
+const hash = require('object-hash');
 
-export class DataSource {
+class DataSource {
   constructor(sourceId, labelPath) {
     this.id = sourceId;
     this.path = labelPath;
@@ -13,24 +15,25 @@ export class DataSource {
     this._cache = {};
   }
 
-  get id() {
-    return this.id;
-  }
+  // get id() {
+  //   return this.id;
+  // }
 
-  get desc() {
-    return this.desc;
-  }
+  // get desc() {
+  //   return this.desc;
+  // }
 
   config(options) {
     this.config = options;
   }
 
   connect() {
-    // to be implemented by actual source
+    // to be implemented by child class
   }
 
-  fetch() {
+  fetch(query) {
     // to be implemented by child class
+    console.log(query);
   }
 
   get(label, options) {
@@ -57,4 +60,4 @@ export class DataSource {
   }
 }
 
-export default DataSource;
+module.exports = DataSource;

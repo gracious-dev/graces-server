@@ -1,7 +1,8 @@
 // Redis cache for data source
 const redis = require('redis');
+// import * as redis from 'redis';
 
-export class DataCache {
+class DataCache {
   constructor(connectionString) {
     if (connectionString === undefined) {
       console.error('Please set the REDIS_URL environment variable');
@@ -40,4 +41,4 @@ export class DataCache {
   }
 }
 
-export default DataCache;
+module.exports = DataCache;

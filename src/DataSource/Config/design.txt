@@ -1,0 +1,99 @@
+-- Configuration time
+DsRegistry.js
+DsEntry.js 
+
+
+Profile
+    1. work at Apple
+    2. live in Sunnyvale 
+    3. like Basketball
+
+Translator: Internal default mappings from Profile to Data Source
+    1. corp news with parameter: APPL
+    2. local news / weather: Sunnyvale  
+    3. sports (leagues, teams, players, games)
+
+
+-- Run time 
+PreScanner.js
+
+
+Aggregator: 
+* Preprocessor to look through Profiles, to aggregate the "parameters"
+* Also look through rules to find out all entity requirement
+    1. corp news:  APPL, TSLA, SBUX
+    2. local news / weather: Sunnyvale, NYC, Alameda
+    3. sports: 
+        3.1 leagues: NBA, NFL, 
+        3.2 teams: Lakers, Warriors, Rockets,
+        3.3 Games: LAL-GSW, SUN-HOU, MAV-BOS
+
+DSExecutor: DataSource API call to end points with parameters 
+    Each endpoint is one data source, returning one data entity  
+    https://api-basketball.p.rapidapi.com/game?date=today&team=warriros 
+
+EntityParser: To extract the data field values from Entity for rule evaluation
+    The json-path of each field in the result JSON, for example,
+    home_score ==> result.response[0].scores.home.total 
+    away_score ==> result.response[0].scores.away.total 
+
+RuleRunner: 
+    Apply rules (Rule definition) to the entity field values and emits resulting events.
+
+==== Sample data ====
+{
+  get: 'games',
+  parameters: {
+    league: '12',
+    season: '2019-2020',
+    date: '2019-11-26',
+    team: '145'
+  },
+  errors: [],
+  results: 1,
+  response: [
+    {
+      id: 1943,
+      date: '2019-11-26T01:30:00+00:00',
+      time: '01:30',
+      timestamp: 1574731800,
+      timezone: 'UTC',
+      stage: null,
+      week: null,
+      status: [Object],
+      league: [Object],
+      country: [Object],
+      teams: {
+        home: {
+            id: 158,
+            name: 'San Antonio Spurs',
+            logo: 'https://media.api-sports.io/basketball/teams/158.png'
+        },
+        away: {
+            id: 145,
+            name: 'Los Angeles Lakers',
+            logo: 'https://media.api-sports.io/basketball/teams/145.png'
+        }
+      },
+      scores: {
+        {
+        home: {
+            quarter_1: 22,
+            quarter_2: 34,
+            quarter_3: 26,
+            quarter_4: 22,
+            over_time: null,
+            total: 104
+        },
+        away: {
+            quarter_1: 25,
+            quarter_2: 29,
+            quarter_3: 32,
+            quarter_4: 28,
+            over_time: null,
+            total: 114
+        }
+      }
+    }
+  ]
+}

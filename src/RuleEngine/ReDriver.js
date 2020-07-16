@@ -29,15 +29,15 @@ const lakers = { teamname: 'Lakers' };
 const warriors = { teamname: 'Warriors' };
 
 var input1 = [lincoln, washington, jefferson];
-var input2 = [joe, larry, lincoln];
-var input3 = [lakers, warriors];
+// var input2 = [joe, larry, lincoln];
+// var input3 = [lakers, warriors];
 
-const inputs = input1.concat(input3).concat(input2);
+// const inputs = input1.concat(input3).concat(input2);
 
 const processor = new Processor(callback);
 processor.addRules(rules);
 processor.addFacts(facts);
 
-processor.addInputs(inputs);
-processor.startAll();
-// processor.start(input1);
+// processor.addInputs(inputs);
+// processor.startAll();
+processor.start(input1);
